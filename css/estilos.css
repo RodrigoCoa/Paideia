@@ -1,0 +1,1189 @@
+/* TIPOGRAFIA */
+.montserrat-normal {
+  font-family: "Montserrat", sans-serif;
+/*  font-optical-sizing: auto;*/
+  font-weight: 400;
+  font-style: normal;
+}
+.montserrat-semibold {
+  font-family: "Montserrat", sans-serif;
+/*  font-optical-sizing: auto;*/
+  font-weight: 500;
+  font-style: normal;
+}
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+/*  font-optical-sizing: auto;*/
+  font-weight: 700;
+  font-style: normal;
+}
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, *{
+ margin: 0;
+ padding: 0;
+ font-family: "Montserrat", sans-serif;
+/* font-optical-sizing: auto;*/
+ font-weight: 400;
+ font-style: normal;
+ font-size: 15px;
+}
+/*SKIP TO MAIN CONTENT*/
+.cointainer-skip{
+  border: 2px solid white;
+}
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em 2em;
+  background-color: #D11067;
+  color: white;
+  opacity: 0;
+  border: 8px solid #172655;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+/*HEADER*/
+header{
+  width: 100%;
+  background-color: #D11067;
+  color: white;
+}
+.cointainer-header{
+  width: 100%;
+  margin: auto;
+}
+.phone-mail-header{
+  display: flex;
+  justify-content: center;
+}
+.social-media{
+  display: flex;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+/*TABLET*/
+@media screen and (min-width: 576px){
+  .cointainer-header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.phone-header a {
+  background: url("../img/phone.svg") no-repeat 100% 0;
+}
+.mail-header a {
+  background: url("../img/mail.svg") no-repeat 100% 0;
+}
+.facebook a {
+  background: url("../img/facebook.svg") no-repeat 100% 0;
+}
+.instagram a {
+  background: url("../img/instagram.svg") no-repeat 100% 0;
+}
+.linkedin a {
+  background: url("../img/linkedin.svg") no-repeat 100% 0;
+}
+.cointainer-header a{
+  background-size: 16px 16px;
+  color:white;
+  background-position: left;
+  padding-left: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.phone-header, .mail-header{
+  padding: 10px;
+}
+/*MENU DE NAVEGACION*/
+nav{
+  background-image: url(../img/blackboard.jpg);
+  background-size: cover;
+}
+nav .cointainer-nav{
+  display: flex;
+  padding: 10px;
+  justify-content:space-between;
+}
+#menustate,
+nav ul,
+nav .close {
+  display: none;
+}
+#menustate:checked ~ nav :is(ul, .close) {
+  display: block;
+}
+#menustate:checked ~ nav .open {
+  display: none;
+}
+nav .open{
+  color: white;
+  font-size: 30px;
+  transform: scale(2, 1.5);
+  display:flex;
+}
+nav ul li .is-active{
+  color: #FFF616;
+ }
+nav ul li a{
+ text-decoration: none;
+ color: white;
+ font-size: 15px;
+ display: flex;
+ text-align: center;
+}
+@media screen and (min-width: 992px){
+  nav .cointainer-nav{
+    width: 80%;
+    margin: auto;
+  }
+  #menustate, nav .open, nav .close{
+    display: none;
+  }
+  nav .cointainer-nav ul{
+    list-style: none;
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul li#nav-sign{
+    background-color: white;
+    border-radius: 21px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  nav ul li#nav-sign a{
+    color: #3d001c;
+  }
+  nav ul li .is-active{
+    border-bottom: 3px solid #FFF616;
+    padding: 8px 8px;
+   }
+  nav ul li .nav-log-in:hover{
+   color: #D11067;
+  }
+  nav ul li#nav-sign:hover, nav ul li#nav-sign .nav-sign-up:hover{
+   background-color: #D11067;
+   color: white;
+  }
+  nav ul li .nav-hover-underline:hover{
+    border-bottom: 3px solid white;
+    padding: 8px 8px;
+  }
+}
+@media screen and (max-width: 992px){
+  nav .cointainer-nav ul{
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000f5;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+  }
+  nav ul li a:hover{
+    width: 20%;
+    border-bottom: 3px solid white;
+    padding: 8px 8px;
+  }
+  nav .cointainer-nav .close{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1001;
+    font-size: 50px;
+    background-color: transparent;
+    border: 0;
+    color: #EDEDED;
+    width: 60px;
+    height: 60px;
+  }
+  nav ul li{
+    padding: 5px;
+  }
+}
+/*FOOTER*/
+footer{
+  width: 100%;
+  background-color: #172655;
+  color: white;
+}
+footer .subscription-wrapper,
+footer .credit-photos{
+  width: 95%;
+  margin: auto;
+}
+/*Teléfono y mail de contacto*/
+footer .phone-mail{
+  padding: 2.5rem 0 0 0;
+  line-height: 1.5;
+}
+footer .phone-mail a{
+  text-decoration: none;
+  color: white;
+}
+/*Menú legal del pie de página*/
+footer .footer-links-privacy ul{
+  width: 90%;
+  display: flex;
+  justify-content:space-between;
+  list-style: none;
+  margin: 1.7rem 0;
+}
+footer .footer-links-privacy ul li a{
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+}
+/*BOTON SUBSCRIBE*/
+footer .subscription-footer{
+  margin: 3rem 0;
+}
+footer .container-input{
+  border-radius: 35px;
+  background-color:#FFFFFF33;
+  width: 74%;
+  display: flex;
+  justify-content: space-between;
+}
+.container-input button{
+  margin-right: 0.8rem;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  border-radius: 50%;
+}
+.container-input button:hover{
+  background-color: #D11067;
+}
+.container-button-submit{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-input input{
+  margin-left: 1.5rem;
+  height: 60px;
+  color: #EDEDED;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+.container-input input::placeholder {
+  color: #EDEDED;
+ }
+.container-input-label{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.mail-wrapper label{
+  text-transform: uppercase;
+  width: 100%;
+}
+/*CRÉDITOS DE LAS IMÁGENES*/
+footer .credit-photos{
+  padding: 1.5rem 0rem 3.2rem 0rem;
+  font-size: 12px;
+}
+footer .credit-photos p{
+  font-size: 12px;
+}
+.credit-photos a{
+  text-decoration: none;
+  background-color:#FFFFFF33;
+  color: white;
+  font-size: 12px;
+}
+.credit-photos a:hover,
+footer .phone-mail a:hover,
+footer .footer-links-privacy ul li a:hover{
+  border-bottom: 1px solid white;
+}
+/*TABLET*/
+@media screen and (min-width: 576px) and (max-width:992px){
+  footer .subscription-wrapper{
+    width: 55%;
+    display: flex;
+    flex-flow: column;
+    margin: 0 2.5% 0 2.5%;
+  }
+  footer .subscription-and-links{
+    order:-1;
+  }
+  footer .phone-mail{
+    padding-top: 1rem;
+  }
+  footer .container-input{
+    width: 100%;
+  }
+  footer .footer-links-privacy ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer-links-privacy a{
+    display: flex;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px){
+  footer .subscription-wrapper,
+  footer .credit-photos{
+    width: 80%;
+    margin: auto;
+  }
+  footer .subscription-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .subscription-and-links{
+    order:-1;
+    width: 37%;
+  }
+  footer .container-input{
+    width: 100%;
+  }
+  footer .footer-links-privacy ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer-links-privacy a{
+    display: flex;
+    text-align: center;
+  }
+  footer .phone-mail{
+    padding-top: 5.5rem;
+  }
+}
+/*CONTACT PAGE*/
+/*LOCATIONS*/
+main .cointainer-main{
+  width: 95%;
+  margin: auto;
+  line-height: 1.5;
+}
+main .cointainer-main h1{
+  color: #D11067;
+  font-size: 35px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main p{
+  color:#172655;
+}
+main h2{
+  color: #7A1628;
+  font-size: 24px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .offices-contact-page h3{
+  color: #7A1628;
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .offices-contact-page a{
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: #D11067;
+}
+/*TABLETS*/
+@media screen and (min-width: 576px){
+  section.offices-contact-page{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.offices-contact-page h2{
+    flex: 100%;
+  }
+  section.offices-contact-page .london{
+    flex:1;
+  }
+  section.offices-contact-page .paris{
+    flex:1;
+  }
+  section.offices-contact-page .los-Angeles{
+    flex:100%;
+  }
+}
+/*STUDENTS*/
+.atmosphere-container-image-card{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.container-image-card{
+  position: relative;
+  text-align: center;
+  height: 110px;
+  width: 125px;
+}
+.image-card{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.student-photo{
+  border: solid;
+  border-width: 3px;
+  border-color: #172655;
+}
+.container-image-city{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50%;
+  bottom: 0px;
+  right: 0%;
+  border:solid;
+  border-width: 3px;
+  border-color: white;
+}
+.container-image-card .city-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.student{
+  text-align: center;
+  background-color: #EDEDED;
+  padding: 0.8rem;
+  line-height: 1.5;
+}
+.students-contact-page .translate{
+  font-size: 14px;
+  color: #7A1628;
+}
+.students-contact-page .email{
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: #D11067;
+}
+.students-contact-page h3{
+  font-size: 16px;
+}
+.students-contact-page p{
+  font-style: oblique;
+}
+
+.students-contact-page h3,
+.students-contact-page p{
+  color: #172655;
+}
+.students-wrapper{
+  display: flex;
+  gap: 1px;
+  flex-direction: column;
+}
+/*TABLETS*/
+@media screen and (min-width: 576px){
+  .students-wrapper{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+  }
+  .student{
+    flex: 30vw;
+  }
+}
+/*FORMULARIO CONTACT PAGE*/
+form{
+  margin: 0;
+  padding: 0;
+}
+.atmosphere-form-call{
+  margin: 35px 0;
+  border: 1px solid #EDEDED;
+  border-radius: 21px;
+  background-color: #FEFBF4;
+  line-height: 1.5;
+}
+.atmosphere-form-call .form-call{
+  width: 90%;
+  margin: auto;
+}
+main .atmosphere-form-call h3{
+  color: #7A1628;
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .atmosphere-form-call a{
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: #D11067;
+}
+.atmosphere-form-call article.name-mail-phone label{
+  display: block;
+}
+.atmosphere-form-call article.name-mail-phone input,
+.atmosphere-form-call select{
+  width: 100%;
+  margin: auto;
+}
+.atmosphere-form-call select{
+  height: 170px;
+}
+.atmosphere-form-call .call-button{
+  background-color: #172655;
+  color: white;
+  border: 0;
+  width: 65%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+/*TABLETS*/
+@media screen and (min-width: 576px){
+  .form-contact-page{
+    width: 75%;
+    margin: auto;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 992px){
+  main{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 8rem;
+  }
+  .cointainer-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .wrapper-desktop-left{
+    margin-right: 2rem;
+    flex: 3.2;
+  }
+  .form-contact-page{
+    flex: 1;
+  }
+  .student{
+    flex: 20vw;
+  }
+}
+/*MAIN LINKS*/
+main .offices-contact-page a:hover, .students-contact-page .email:hover, .legal-link:hover,
+main .steps-to-become-instructor a:hover{
+  text-decoration-line: underline;
+  /*border-bottom: 1px solid yellow;*/
+}
+main .students-contact-page .translate:hover{
+  font-weight: bolder;
+  text-decoration-thickness: 3px;
+}
+.form-contact-page .call-button:hover{
+  background-color: #D11067;
+}
+main .steps-to-become-instructor .apply-button:hover{
+  background-color: #D11067;
+  color: white;
+}
+main .steps-to-become-instructor a{
+  text-decoration: none;
+  color: #D11067;
+}
+main .steps-to-become-instructor a:hover{
+  color: #7A1628;
+}
+/*BECOME AN INSTRUCTOR.HTML*/
+main .cointainer-main-become{
+  width: 95%;
+  margin: auto;
+  line-height: 1.5;
+}
+main .cointainer-main-become h1{
+  color: #D11067;
+  font-size: 35px;
+  margin-top: 1rem;
+}
+main .cointainer-main-become .introduction-career{
+  font-size: 20px;
+}
+main .cointainer-main-become figure{
+  text-align: center;
+}
+main .steps-to-be-instructor ol {
+    list-style-position:inside;
+    padding: 20px;
+}
+main .steps-to-be-instructor{
+    border: 3px solid #D11067;
+}
+main .steps-to-be-instructor a{
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  color: #D11067;
+}
+main .steps-to-be-instructor li::marker {
+    color: #D11067;
+}
+main .number-step span{
+  padding: 2px 8px;
+  border: 1px solid #333333;
+  margin-right: 8px;
+  font-size: 20px;
+}
+main .cointainer-main-become h3{
+  font-size: 18px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .steps{
+  display: flex;
+  align-items: baseline;
+}
+main .icon-academic{
+  background: url("../img/icon-academic.svg") no-repeat 100% 0;
+}
+main .description-step .icon-academic{
+  background-size: 16px 16px;
+  background-position: top left;
+  padding-left: 25px;
+}
+main .wrapper-first-step{
+  padding: 20px;
+  border: 1px solid #EDEDED;
+  margin: 20px 0;
+}
+main .wrapper-first-step ul{
+  list-style-position:inside;
+  list-style-type: circle;
+}
+main .steps-to-become-instructor .apply-button{
+  background-color: white;
+  color: #D11067;
+  border: 1px solid #D11067;
+  width: 8rem;
+  padding: 14px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+main .steps-to-become-instructor p{
+  margin-bottom: 10px;
+}
+main .cointainer-main-become h3 abbr{
+  font-size: 18px;
+}
+/*INSTRUCTOR CAREER PATH*/
+main .wrapper-career-path{
+  width: 300px;
+  border: 1px solid #333333;
+  margin: 4rem auto;
+  padding-bottom: 1rem;
+}
+main .wrapper-career-path h3{
+  border-bottom: 1px solid #333333;
+  margin: 0;
+  padding: 4px 7px;
+  background-color: #E3EDFD;
+}
+main .wrapper-career-path ol{
+  list-style-position:inside;
+  padding-left: 6px;
+}
+main .wrapper-career-path ol .information-step{
+  padding-left: 1em;
+  margin-top: 1em;
+  list-style: none;
+  line-height: 1.8;
+}
+main .wrapper-career-path .chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 1.2em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 1.2em;
+}
+main .wrapper-career-path .chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+main .wrapper-career-path .chevron-bottom {
+  text-align: center;
+  margin: 1.2em 0;
+}
+main .wrapper-career-path .calendary-icon{
+  background: url("../img/calendar.svg") no-repeat 100% 0;
+}
+main .wrapper-career-path .money-icon{
+  background: url("../img/money.svg") no-repeat 100% 0;
+}
+main .wrapper-career-path .briefcase-icon{
+  background: url("../img/wallet.svg") no-repeat 100% 0;
+}
+main .wrapper-career-path .calendary-icon,
+main .wrapper-career-path .money-icon,
+main .wrapper-career-path .briefcase-icon{
+  background-size: 18px 18px;
+  background-position: center left;
+  padding-left: 25px;
+  font-size: 14px;
+}
+main .wrapper-career-path ul span{
+  font-size: 14px;
+}
+main .wrapper-career-path .list-steps ol li{
+  font-size: 16px;
+}
+/*DESKTOP*/
+@media screen and (min-width: 992px){
+  main .cointainer-main-become{
+    display: flex;
+    align-items: flex-start;
+  }
+  main .wrapper-steps-description{
+    margin-right: 2rem;
+    flex: 2;
+  }
+  main .wrapper-career-path{
+    flex: 0.7;
+    margin: 2rem auto;
+  }
+}
+/*INDEX.HTML PAGE*/
+nav .text-and-search{
+  width: 95%;
+  margin: auto;
+  line-height: 1.5;
+  text-align: center;
+}
+nav .text-and-search h1{
+  color: white;
+  font-size: 55px;
+  margin: 2rem auto;
+}
+nav .text-and-search h1 .paint-yellow{
+  color: #FFF616;
+  font-size: 55px;
+}
+nav .text-and-search h1>span{
+  font-size: 55px;
+}
+nav .text-and-search p{
+  color: white;
+  margin-top: 2rem;
+}
+nav .input-container-search-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.7rem 0.55rem 0.7rem 2.15rem;
+  border-radius: 35px;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav .input-container-search-header input{
+  outline: none;
+  background: transparent;
+  width: 70%;
+  border: 0;
+}
+nav .input-container-search-header input:focus{
+  border: 0;
+}
+nav .input-container-search-header .box-button-search-header{
+  background-color: #D11067;
+  border-radius: 21px;
+  border: 0;
+  padding: 12px;
+}
+nav .input-container-search-header .box-button-search-header:hover{
+  background-color: #172655;
+}
+nav .box-button-search-header button{
+  display: flex;
+}
+nav .logo-search{
+  margin-right: 15px;
+}
+nav .input-container-search-header .box-button-search-header button{
+  background-color: transparent;
+  color: #EDEDED;
+  border: 0;
+}
+nav .wrapper-nav-cards{
+  max-width: 70rem;
+  margin: auto;
+}
+nav .wrapper-nav-cards .card-nav{
+  width: 300px;
+  margin: 4rem auto;
+}
+nav .wrapper-nav-cards h2.text-title-card{
+  font-size: 20px;
+  color: white;
+}
+nav{
+  border-bottom: 1px solid;
+}
+/*INDEX COURESE*/
+main .index-popular-courses h2{
+  color: #D11067;
+}
+main .index-popular-courses .articles-courses .card-courses-body h3{
+  color: #7A1628;
+}
+main .main-card-course a{
+  text-decoration: none;
+}
+main .main-card-course{
+  border-radius: 10px;
+  border: 1px solid #EDEDED;
+  margin: 1rem 0;
+  position: relative;
+}
+main .main-card-course:hover{
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+  border-color: #172655;
+  transform: scale(1.1);
+}
+main .course-properties{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+main .course-properties .lessons p {
+  background: url("../img/lessons.svg") no-repeat 100% 0;
+}
+main .course-properties .duration p {
+  background: url("../img/duration.svg") no-repeat 100% 0;
+}
+main .course-properties .level p {
+  background: url("../img/level.svg") no-repeat 100% 0;
+}
+main .course-properties .property-course p {
+  background-size: 16px 16px;
+  background-position: left;
+  padding-left: 25px;
+  font-size: 12px;
+}
+main .main-card-course .card-image-header img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+main .main-card-course .card-image-header{
+  height: 160px;
+  width: 100%;
+}
+
+main .main-card-course .badge-new{
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  background-color: #D11067;
+  color: #EDEDED;
+  padding: 0.5rem;
+  border-radius: 21px;
+  margin: 0;
+}
+main .main-card-course .badge-best-seller{
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  background-color: #FFF616;
+  color: #D11067;
+  font-size: 13px;
+  padding: 0.5rem;
+  border-radius: 21px;
+}
+main .main-card-course .card-courses-body{
+  padding: 1rem 0.9rem 2rem 0.9rem;
+}
+main .browse-button-wrapper{
+  text-align: center;
+  margin: 3rem 0;
+}
+main .index-popular-courses .browse-button{
+  background-color: white;
+  color: #D11067;
+  border: 1px solid #D11067;
+  width: 13rem;
+  padding: 14px;
+  border-radius: 10px;
+}
+main .index-popular-courses .browse-button:hover{
+  background-color: #D11067;
+  color: white;
+}
+main .cointainer-main-index .index-popular-courses{
+  width: 90%;
+  margin: auto;
+  line-height: 1.5;
+}
+/**/
+main.index-main{
+  width: 100%;
+}
+main .cointainer-main-index .banner-learning-path{
+  background-image: url(../img/learn-path.jpg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  color: white;
+  padding-bottom: 5rem;
+}
+main .cointainer-main-index h1{
+  font-size: 60px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+main .cointainer-main-index .content-box-shadow p{
+  color: white;
+  margin: 2rem;
+}
+main .cointainer-main-index .content-box-shadow{
+  padding: 1rem;
+  text-align: center;
+}
+main .cointainer-main-index .content-box-shadow a{
+  text-decoration: none;
+  border: 1px solid #EDEDED;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+}
+main .cointainer-main-index .content-box-shadow a:hover{
+  border-color: #FFF616;
+  color: #FFF616;
+}
+main .wrapper-online-learning ul li{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+main .wrapper-online-learning .image-logo{
+  background-color: #DEF5F0;
+  border-radius: 50%;
+  margin-right: 1rem;
+  padding: 1.3rem;
+}
+main .wrapper-online-learning .promotion{
+  background-color: #E3EDFD;
+}
+main .wrapper-online-learning .rocket{
+  background-color: #F7E9E7;
+}
+main .wrapper-online-learning .register-now-button{
+  padding-left: 6rem;
+  margin-bottom: 2rem;
+}
+main .wrapper-online-learning .register-now-button .register-button{
+  background-color: white;
+  color: #D11067;
+  border: 1px solid #D11067;
+  width: 10rem;
+  padding: 14px;
+  border-radius: 10px;
+}
+main .wrapper-online-learning .register-now-button .register-button:hover{
+  background-color: #D11067;
+  color: white;
+}
+main .section-online-learning .content-list-learning h2{
+  font-size: 18px;
+}
+main .section-online-learning h1{
+  color: #7A1628;
+}
+main .section-online-learning figure{
+  text-align: center;
+}
+main .section-online-learning figure img{
+  margin-right : auto;
+  margin-left : auto;
+  min-width: 300px;
+  max-width: 400px;
+  width: 80%;
+  border-radius: 10px;
+}
+main .section-online-learning{
+  width: 95%;
+  margin: 3rem auto;
+}
+/*TOP CATEGORIES INDEX.HTML*/
+.top-categories-section{
+  width: 100%;
+  background-color: #EDEDED;
+  box-shadow: 7px 9px 15px #d8d8d8 inset;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.container-top-categories{
+  width: 95%;
+  text-align: center;
+  margin: auto;
+}
+.grid-element{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #172655;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+}
+.grid-element:hover{
+  background-color: #D11067;
+}
+.category-link{
+  text-decoration: none;
+}
+.category-link p, .category-link h3{
+  color: #EDEDED;
+  line-height: 2rem;
+}
+.container-top-categories h2{
+  color: #D11067;
+}
+.category-link h3{
+  font-size: 18px;
+}
+.container-top-categories .grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+/*BECOME AN Instructor index.html*/
+main .become-instructor{
+  width: 95%;
+  margin: auto;
+  line-height: 1.5;
+  padding: 3rem 0;
+}
+main .become-instructor .apply-button{
+  background-color: white;
+  color: #D11067;
+  border: 1px solid #D11067;
+  width: 8rem;
+  padding: 14px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+main .become-instructor .apply-button:hover{
+  background-color: #D11067;
+  color: white;
+}
+main .become-instructor figure{
+  text-align: center;
+}
+main .become-instructor figure img{
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+/*TABLETS*/
+@media screen and (min-width: 576px){
+  nav .text-and-search h1>span{
+    display: block;
+  }
+  .container-header-content .wrapper-nav-cards{
+    display: flex;
+  }
+  .index-popular-courses .articles-courses{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+  .index-popular-courses .articles-courses .main-card-course{
+    flex: 1 1 40%;
+  }
+  .top-categories-section .container-top-categories .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .become-instructor .article-become-instructor{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+  }
+  .become-instructor .article-become-instructor .wrapper-become-instructor{
+    flex: 1;
+  }
+  .become-instructor .article-become-instructor figure{
+    flex: 1;
+  }
+  .become-instructor .article-become-instructor figure img{
+    width: 100%;
+  }
+}
+/*DESKTOP*/
+@media screen and (min-width: 992px){
+  .index-main .cointainer-main-index section.index-popular-courses,
+  .index-main .cointainer-main-index section.section-online-learning,
+  .top-categories-section .container-top-categories{
+    width: 85%;
+    margin: 2rem auto;
+  }
+  .index-popular-courses .articles-courses .main-card-course{
+    flex: 1 1 20%;
+  }
+  .section-online-learning{
+    display: flex;
+    align-items: center;
+  }
+  main .section-online-learning .wrapper-online-learning{
+    flex: 1;
+  }
+  main .section-online-learning figure{
+    flex: 1.3;
+  }
+  .top-categories-section .container-top-categories .grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 150px 150px;
+  }
+  .top-categories-section .container-top-categories .grid .grid-element-rows-two{
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+}
