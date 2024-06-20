@@ -1,19 +1,16 @@
 /* TIPOGRAFIA */
 .montserrat-normal {
   font-family: "Montserrat", sans-serif;
-/*  font-optical-sizing: auto;*/
   font-weight: 400;
   font-style: normal;
 }
 .montserrat-semibold {
   font-family: "Montserrat", sans-serif;
-/*  font-optical-sizing: auto;*/
   font-weight: 500;
   font-style: normal;
 }
 .montserrat-bold {
   font-family: "Montserrat", sans-serif;
-/*  font-optical-sizing: auto;*/
   font-weight: 700;
   font-style: normal;
 }
@@ -27,7 +24,6 @@ html, *{
  margin: 0;
  padding: 0;
  font-family: "Montserrat", sans-serif;
-/* font-optical-sizing: auto;*/
  font-weight: 400;
  font-style: normal;
  font-size: 15px;
@@ -38,6 +34,7 @@ html, *{
 }
 .skip-to-main-content-link {
   position: absolute;
+  top: 76%;
   left: -9999px;
   z-index: 999;
   padding: 1em 2em;
