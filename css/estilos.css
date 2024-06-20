@@ -556,9 +556,6 @@ main .atmosphere-form-call a{
   width: 100%;
   margin: auto;
 }
-.atmosphere-form-call select{
-  height: 170px;
-}
 .atmosphere-form-call .call-button{
   background-color: #172655;
   color: white;
